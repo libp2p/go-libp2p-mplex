@@ -1,4 +1,4 @@
-module github.com/whyrusleeping/go-smux-multiplex
+module github.com/libp2p/go-libp2p-mplex
 
 go 1.12
 
