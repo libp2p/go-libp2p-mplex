@@ -3,8 +3,9 @@ package peerstream_multiplex
 import (
 	"net"
 
-	mp "github.com/libp2p/go-mplex"          // Conn is a connection to a remote peer.
-	smux "github.com/libp2p/go-stream-muxer" // Conn is a connection to a remote peer.
+	"github.com/libp2p/go-libp2p-core/mux"
+
+	mp "github.com/libp2p/go-mplex"
 )
 
 type conn struct {
@@ -20,12 +21,12 @@ func (c *conn) IsClosed() bool {
 }
 
 // OpenStream creates a new stream.
-func (c *conn) OpenStream() (smux.Stream, error) {
+func (c *conn) OpenStream() (mux.MuxedStream, error) {
 	return c.Multiplex.NewStream()
 }
 
 // AcceptStream accepts a stream opened by the other side.
-func (c *conn) AcceptStream() (smux.Stream, error) {
+func (c *conn) AcceptStream() (mux.MuxedStream, error) {
 	return c.Multiplex.Accept()
 }
 
@@ -36,6 +37,6 @@ type Transport struct{}
 // DefaultTransport has default settings for multiplex
 var DefaultTransport = &Transport{}
 
-func (t *Transport) NewConn(nc net.Conn, isServer bool) (smux.Conn, error) {
+func (t *Transport) NewConn(nc net.Conn, isServer bool) (mux.MuxedConn, error) {
 	return &conn{mp.NewMultiplex(nc, isServer)}, nil
 }
