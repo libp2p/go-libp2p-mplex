@@ -16,7 +16,7 @@ func (s *stream) Read(b []byte) (n int, err error) {
 		err = mux.ErrReset
 	}
 
-	return
+	return n, err
 }
 
 func (s *stream) Write(b []byte) (n int, err error) {
@@ -25,7 +25,7 @@ func (s *stream) Write(b []byte) (n int, err error) {
 		err = mux.ErrReset
 	}
 
-	return
+	return n, err
 }
 
 func (s *stream) Close() error {
