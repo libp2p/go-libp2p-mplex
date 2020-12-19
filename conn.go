@@ -18,8 +18,8 @@ func (c *conn) IsClosed() bool {
 }
 
 // OpenStream creates a new stream.
-func (c *conn) OpenStream(context.Context) (mux.MuxedStream, error) {
-	s, err := c.mplex().NewStream()
+func (c *conn) OpenStream(ctx context.Context) (mux.MuxedStream, error) {
+	s, err := c.mplex().NewStream(ctx)
 	if err != nil {
 		return nil, err
 	}
