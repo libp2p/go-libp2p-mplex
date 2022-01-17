@@ -18,5 +18,9 @@ var _ network.Multiplexer = &Transport{}
 type Transport struct{}
 
 func (t *Transport) NewConn(nc net.Conn, isServer bool, scope network.PeerScope) (network.MuxedConn, error) {
-	return (*conn)(mp.NewMultiplex(nc, isServer, scope)), nil
+	m, err := mp.NewMultiplex(nc, isServer, scope)
+	if err != nil {
+		return nil, err
+	}
+	return (*conn)(m), nil
 }
