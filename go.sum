@@ -67,8 +67,8 @@ github.com/libp2p/go-libp2p-core v0.3.0/go.mod h1:ACp3DmS3/N64c2jDzcV429ukDpicbL
 github.com/libp2p/go-libp2p-core v0.14.0 h1:0kYSgiK/D7Eo28GTuRXo5YHsWwAisVpFCqCVPUd/vJs=
 github.com/libp2p/go-libp2p-core v0.14.0/go.mod h1:tLasfcVdTXnixsLB0QYaT1syJOhsbrhG7q6pGrHtBg8=
 github.com/libp2p/go-libp2p-testing v0.1.2-0.20200422005655-8775583591d8/go.mod h1:Qy8sAncLKpwXtS2dSnDOP8ktexIAHKu+J+pnZOFZLTc=
-github.com/libp2p/go-libp2p-testing v0.8.0 h1:/te8SOIyj5sGH5Jr1Uoo+qYB00aK8O4+yHGzLgfE3kc=
-github.com/libp2p/go-libp2p-testing v0.8.0/go.mod h1:gRdsNxQSxAZowTgcLY7CC33xPmleZzoBpqSYbWenqPc=
+github.com/libp2p/go-libp2p-testing v0.9.2 h1:dCpODRtRaDZKF8HXT9qqqgON+OMEB423Knrgeod8j84=
+github.com/libp2p/go-libp2p-testing v0.9.2/go.mod h1:Td7kbdkWqYTJYQGTwzlgXwaqldraIanyjuRiAbK/XQU=
 github.com/libp2p/go-mplex v0.6.0 h1:5kKp029zrsLVJT5q6ASt4LwuZFxj3B13wXXaGmFrWg0=
 github.com/libp2p/go-mplex v0.6.0/go.mod h1:y26Lx+wNVtMYMaPu300Cbot5LkEZ4tJaNYeHeT9dh6E=
 github.com/libp2p/go-msgio v0.0.6/go.mod h1:4ecVB6d9f4BDSL5fqvPiC4A3KivjWn+Venn/1ALLMWA=
