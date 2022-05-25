@@ -1,3 +1,7 @@
+# DEPRECATION NOTICE
+
+This package has moved into go-libp2p as a sub-package, github.com/libp2p/go-libp2p/p2p/muxer/mplex.
+
 # go-libp2p-mplex - a go-stream-muxer shim for multiplex
 
 [![](https://img.shields.io/badge/made%20by-Protocol%20Labs-blue.svg?style=flat-square)](http://ipn.io) [![](https://img.shields.io/badge/freenode-%23ipfs-blue.svg?style=flat-square)](http://webchat.freenode.net/?channels=%23ipfs) ![](https://raw.githubusercontent.com/libp2p/go-stream-muxer/master/img/badge.png)

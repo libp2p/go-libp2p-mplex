@@ -1,26 +1,15 @@
+// Deprecated: This package has moved into go-libp2p as a sub-package: github.com/libp2p/go-libp2p/p2p/muxer/mplex.
 package peerstream_multiplex
 
 import (
-	"net"
-
-	"github.com/libp2p/go-libp2p-core/network"
-
-	mp "github.com/libp2p/go-mplex"
+	"github.com/libp2p/go-libp2p/p2p/muxer/mplex"
 )
 
 // DefaultTransport has default settings for Transport
-var DefaultTransport = &Transport{}
-
-var _ network.Multiplexer = &Transport{}
+// Deprecated: use github.com/libp2p/go-libp2p/p2p/muxer/mplex.DefaultTransport instead.
+var DefaultTransport = mplex.DefaultTransport
 
 // Transport implements mux.Multiplexer that constructs
 // mplex-backed muxed connections.
-type Transport struct{}
-
-func (t *Transport) NewConn(nc net.Conn, isServer bool, scope network.PeerScope) (network.MuxedConn, error) {
-	m, err := mp.NewMultiplex(nc, isServer, scope)
-	if err != nil {
-		return nil, err
-	}
-	return (*conn)(m), nil
-}
+// Deprecated: use github.com/libp2p/go-libp2p/p2p/muxer/mplex.Transport instead.
+type Transport = mplex.Transport
