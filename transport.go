@@ -1,3 +1,5 @@
+// DEPRECATED: mplex has been deprecated. Users should prefer yamux over mplex. see https://github.com/libp2p/specs/issues/553
+// for details
 package mplex
 
 import (
