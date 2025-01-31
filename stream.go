@@ -47,6 +47,12 @@ func (s *stream) Reset() error {
 	return s.mplex().Reset()
 }
 
+// ResetWithError resets the stream ignoring the error code.
+// There's no mechanism to send an error code to the peer in mplex.
+func (s *stream) ResetWithError(_ network.StreamErrorCode) error {
+	return s.mplex().Reset()
+}
+
 func (s *stream) SetDeadline(t time.Time) error {
 	return s.mplex().SetDeadline(t)
 }
