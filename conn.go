@@ -21,6 +21,12 @@ func (c *conn) Close() error {
 	return c.mplex().Close()
 }
 
+// CloseWithError cloes the connection ignoring the error code.
+// There's no mechanism to send an error code to the peer in mplex.
+func (c *conn) CloseWithError(_ network.ConnErrorCode) error {
+	return c.mplex().Close()
+}
+
 func (c *conn) IsClosed() bool {
 	return c.mplex().IsClosed()
 }
