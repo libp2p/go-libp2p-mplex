@@ -2,7 +2,6 @@ module github.com/libp2p/go-libp2p-mplex
 
 go 1.23
 
-
 require (
 	github.com/libp2p/go-libp2p v0.40.0
 	github.com/libp2p/go-mplex v0.7.0
