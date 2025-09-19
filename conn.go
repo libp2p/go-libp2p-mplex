@@ -17,6 +17,10 @@ func NewMuxedConn(m *mp.Multiplex) network.MuxedConn {
 	return (*conn)(m)
 }
 
+func (c *conn) As(target any) bool {
+	return false
+}
+
 func (c *conn) Close() error {
 	return c.mplex().Close()
 }
