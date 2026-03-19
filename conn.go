@@ -18,6 +18,10 @@ func NewMuxedConn(m *mp.Multiplex) network.MuxedConn {
 }
 
 func (c *conn) As(target any) bool {
+	if t, ok := target.(**mp.Multiplex); ok {
+		*t = c.mplex()
+		return true
+	}
 	return false
 }
 
